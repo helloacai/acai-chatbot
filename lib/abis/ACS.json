@@ -1,0 +1,340 @@
+{
+  "address": "0x5AFc57F7F6D6Dd560A87Ab073ebd09C8e4f4544a",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract IACIRegistry",
+          "name": "registry",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidRegistry",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "UnknownThreadUID",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "aciUID",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "parentThreadUID",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "threadUID",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "requester",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "requestRef",
+          "type": "string"
+        }
+      ],
+      "name": "Requested",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "threadUID",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "fundingAmount",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "funder",
+          "type": "address"
+        }
+      ],
+      "name": "ThreadFunded",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "threadUID",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getThread",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "bytes32",
+              "name": "threadUID",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "parentThreadUID",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "agentUID",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "address",
+              "name": "requester",
+              "type": "address"
+            },
+            {
+              "internalType": "uint32",
+              "name": "totalBudget",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint32",
+              "name": "remainingBudget",
+              "type": "uint32"
+            },
+            {
+              "internalType": "enum Status",
+              "name": "status",
+              "type": "uint8"
+            }
+          ],
+          "internalType": "struct Thread",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "parentThreadUID",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "threadUID",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "aciUID",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "string",
+          "name": "requestRef",
+          "type": "string"
+        }
+      ],
+      "name": "request",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xfc5b8c7e51b30ea7d9c893ba35b89786a4758918b08168a4197f8bbc324230ef",
+  "receipt": {
+    "to": null,
+    "from": "0xBB0F7C96E024f987B490031D22F6D40D0b4Cc7eD",
+    "contractAddress": "0x5AFc57F7F6D6Dd560A87Ab073ebd09C8e4f4544a",
+    "transactionIndex": 87,
+    "gasUsed": "354534",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000800000000000000000000100000000000000000000000000000000000000000000000000000100000080000000000000000000044000000000000000000000000000000000000000000000000000000000200000000000000000000000000008000000000000000000000020000000006000000000000000000001000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000100000",
+    "blockHash": "0x027bd643b784684fad77b5328049f439acff6cb8659fb31510e485198f74603b",
+    "transactionHash": "0xfc5b8c7e51b30ea7d9c893ba35b89786a4758918b08168a4197f8bbc324230ef",
+    "logs": [
+      {
+        "transactionIndex": 87,
+        "blockNumber": 63257653,
+        "transactionHash": "0xfc5b8c7e51b30ea7d9c893ba35b89786a4758918b08168a4197f8bbc324230ef",
+        "address": "0x0000000000000000000000000000000000001010",
+        "topics": [
+          "0x4dfe1bbbcf077ddc3e01291eea2d5c70c2b422b415d95645b9adcfd678cb1d63",
+          "0x0000000000000000000000000000000000000000000000000000000000001010",
+          "0x000000000000000000000000bb0f7c96e024f987b490031d22f6d40d0b4cc7ed",
+          "0x000000000000000000000000eedba2484aaf940f37cd3cd21a5d7c4a7dafbfc0"
+        ],
+        "data": "0x00000000000000000000000000000000000000000000000000284e4c242f8000000000000000000000000000000000000000000000000000f8165649e27bfe070000000000000000000000000000000000000000000173c48c793e0a35b88141000000000000000000000000000000000000000000000000f7ee07fdbe4c7e070000000000000000000000000000000000000000000173c48ca18c5659e80141",
+        "logIndex": 1217,
+        "blockHash": "0x027bd643b784684fad77b5328049f439acff6cb8659fb31510e485198f74603b"
+      }
+    ],
+    "blockNumber": 63257653,
+    "cumulativeGasUsed": "25033453",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x67d75De4eEA0b11B40fd0EdA5bDb2B95319Ce9e1"
+  ],
+  "numDeployments": 2,
+  "solcInputHash": "e0c6cdc4749ebfdfc672a8538797d27f",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract IACIRegistry\",\"name\":\"registry\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"InvalidRegistry\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"UnknownThreadUID\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"aciUID\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"parentThreadUID\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"threadUID\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"requester\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"requestRef\",\"type\":\"string\"}],\"name\":\"Requested\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"threadUID\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"fundingAmount\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"funder\",\"type\":\"address\"}],\"name\":\"ThreadFunded\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"threadUID\",\"type\":\"bytes32\"}],\"name\":\"getThread\",\"outputs\":[{\"components\":[{\"internalType\":\"bytes32\",\"name\":\"threadUID\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"parentThreadUID\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"agentUID\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"requester\",\"type\":\"address\"},{\"internalType\":\"uint32\",\"name\":\"totalBudget\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"remainingBudget\",\"type\":\"uint32\"},{\"internalType\":\"enum Status\",\"name\":\"status\",\"type\":\"uint8\"}],\"internalType\":\"struct Thread\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"parentThreadUID\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"threadUID\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"aciUID\",\"type\":\"bytes32\"},{\"internalType\":\"string\",\"name\":\"requestRef\",\"type\":\"string\"}],\"name\":\"request\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/ACS.sol\":\"ACS\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":1},\"remappings\":[]},\"sources\":{\"contracts/ACIRegistry.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.7;\\n\\nimport { IACIRegistry } from \\\"./IACIRegistry.sol\\\";\\nimport {CostPer, ACIRecord, Status} from './IACIRegistry.sol';\\n\\ncontract ACIRegistry is IACIRegistry {\\n    error AlreadyExists();\\n\\n    mapping(bytes32 uid => ACIRecord aciRecord) private _registry;\\n\\n\\n    function register(\\n        address executor,\\n        uint32 cost,\\n        CostPer costPer,\\n        string calldata metadataURI,\\n        string calldata apiurl\\n    ) external returns (bytes32) {\\n        ACIRecord memory aciRecord = ACIRecord({\\n            uid: bytes32(0),\\n            executor: executor,\\n            owner: msg.sender,\\n            cost: cost,\\n            costPer: costPer,\\n            metadataURI: metadataURI,\\n            apiurl: apiurl,\\n            status: Status.Active\\n        });\\n\\n        bytes32 uid = _getUID(aciRecord);\\n        if (_registry[uid].uid != bytes32(0)) {\\n            revert AlreadyExists();\\n        }\\n\\n        aciRecord.uid = uid;\\n        _registry[uid] = aciRecord;\\n\\n        emit Registered(uid, msg.sender, aciRecord);\\n\\n        return uid;\\n    }\\n\\n    function getACI(\\n        bytes32 uid\\n    ) external view returns (ACIRecord memory) {\\n        return _registry[uid];\\n    }\\n\\n    function _getUID(ACIRecord memory aciRecord) private pure returns (bytes32) {\\n        return keccak256(abi.encodePacked(aciRecord.apiurl, aciRecord.metadataURI));\\n    }\\n}\\n\",\"keccak256\":\"0x811223d28bd97533dd8045c1364d60ed52fce3cd755fa148fb66e132f9b34f85\",\"license\":\"MIT\"},\"contracts/ACS.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.7;\\n\\nimport { IACIRegistry } from \\\"./IACIRegistry.sol\\\";\\nimport { IACS, Status, Thread } from './IACS.sol';\\nimport { ACIRegistry } from \\\"./ACIRegistry.sol\\\";\\n\\ncontract ACS is IACS {\\n    error InvalidRegistry();\\n    error UnknownThreadUID();\\n\\n    // The global ACI registry.\\n    IACIRegistry private immutable _aciRegistry;\\n\\n    mapping(bytes32 threadUID => Thread thread) private _threads;\\n\\n    bytes32 _defaultCoordinator;\\n\\n\\n    constructor(IACIRegistry registry) {\\n        if (address(registry) == address(0)) {\\n            revert InvalidRegistry();\\n        }\\n\\n        _aciRegistry = registry;\\n    }\\n\\n    function request(\\n        bytes32 parentThreadUID, \\n        bytes32 threadUID,\\n        bytes32 aciUID,\\n        string calldata requestRef\\n    ) external returns (bytes32) {\\n\\n        if(threadUID == bytes32(0)) {\\n            // If no thread provided, create a new thread\\n            bytes32 tUID = _getThreadUID(msg.sender, requestRef);\\n            Thread memory thread = Thread({\\n                threadUID: tUID,\\n                parentThreadUID: parentThreadUID != bytes32(0) && _threads[parentThreadUID].threadUID != bytes32(0) ? parentThreadUID : bytes32(0),\\n                agentUID: aciUID == bytes32(0) ? _defaultCoordinator : aciUID,\\n                requester: msg.sender,\\n                totalBudget: 0,\\n                remainingBudget: 0,\\n                status: Status.Active\\n            });\\n            _threads[tUID] = thread;\\n            emit Requested(aciUID, thread.parentThreadUID, thread.threadUID, msg.sender, requestRef);\\n            return thread.threadUID;\\n        } else {\\n            // If the threadUID doesn't have a corresponding valid thread revert\\n            if(_threads[threadUID].threadUID == bytes32(0)) {\\n                revert UnknownThreadUID();\\n            }\\n            // Thread exists and has been validly requested\\n            emit Requested(aciUID, parentThreadUID, threadUID, msg.sender, requestRef);\\n            return threadUID;\\n        }\\n\\n    }\\n\\n    function getThread(\\n        bytes32 threadUID\\n    ) external view returns (Thread memory) {\\n        return _threads[threadUID];\\n    }\\n\\n    function _getThreadUID(address requester, string calldata requestRef) private view returns (bytes32) {\\n        return keccak256(abi.encodePacked(requester, requestRef, block.number));\\n    }\\n}\",\"keccak256\":\"0x7d8b1fd8b6b13b1b23ffb3e4189e1ddb7637f777e5e96b84f98c60861fa72a2d\",\"license\":\"MIT\"},\"contracts/IACIRegistry.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.7;\\n\\n/// @notice Enum representing the work upon which the total cost is calculated (ie. per Token, per Job, etc.)\\nenum CostPer {\\n    Token,\\n    Job\\n}\\n\\nenum Status {\\n    Active,\\n    Inactive,\\n    Ignored\\n}\\n\\n/// @notice A struct representing a registered ACI\\nstruct ACIRecord {\\n    bytes32 uid;\\n    address executor;\\n    address owner;\\n    uint32 cost;\\n    CostPer costPer;\\n    string metadataURI;\\n    string apiurl;\\n    Status status;\\n    \\n}\\n\\ninterface IACIRegistry {\\n    event Registered(bytes32 indexed uid, address indexed executor, ACIRecord aci);\\n\\n    function register(\\n        address executor,\\n        uint32 cost,\\n        CostPer costPer,\\n        string calldata metadataURI,\\n        string calldata apiurl\\n    ) external returns (bytes32);\\n\\n    function getACI(bytes32 uid) external view returns (ACIRecord memory);\\n}\\n\",\"keccak256\":\"0x97e18c4119019ca35dfad95ec0ac334ac68d46d39b93786b072e0e317747d8cf\",\"license\":\"MIT\"},\"contracts/IACS.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.7;\\n\\nenum Status {\\n    Active,\\n    Closed,\\n    Reviewed\\n}\\n\\n/// @notice A struct representing a thread\\nstruct Thread {\\n    bytes32 threadUID;\\n    bytes32 parentThreadUID;\\n    bytes32 agentUID;\\n    address requester;\\n    uint32 totalBudget;\\n    uint32 remainingBudget;\\n    Status status;\\n}\\n\\ninterface IACS {\\n    event Requested(bytes32 indexed aciUID, bytes32 indexed parentThreadUID, bytes32 indexed threadUID, address requester, string requestRef);\\n    event ThreadFunded(bytes32 indexed threadUID, uint32 fundingAmount, address funder);\\n\\n    function request(\\n        bytes32 parentThreadUID, \\n        bytes32 threadUID,\\n        bytes32 aciUID,\\n        string calldata requestRef\\n    ) external returns (bytes32);\\n\\n    function getThread(\\n        bytes32 threadUID\\n    ) external returns (Thread memory);\\n}\\n\",\"keccak256\":\"0x6c90e5895d49add42d129bbd0504385f8a0bd07ee3d4499873be0862adf49127\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x60a060405234801561001057600080fd5b5060405161061538038061061583398101604081905261002f91610067565b6001600160a01b038116610056576040516311a1e69760e01b815260040160405180910390fd5b6001600160a01b0316608052610097565b60006020828403121561007957600080fd5b81516001600160a01b038116811461009057600080fd5b9392505050565b6080516105666100af600039600050506105666000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c8063785102901461003b578063e27cd07414610061575b600080fd5b61004e610049366004610393565b610081565b6040519081526020015b60405180910390f35b61007461006f36600461041f565b610276565b604051610058919061044e565b60008461021257600061009533858561035b565b905060006040518060e001604052808381526020016000801b8a141580156100ca575060008a81526020819052604090205415155b6100d55760006100d7565b895b815260200187156100e857876100ec565b6001545b8152336020820152600060408201819052606082018190526080909101526000838152602081815260409182902083518155908301516001820155908201516002808301919091556060830151600383018054608086015160a087015163ffffffff908116600160c01b0263ffffffff60c01b1991909216600160a01b026001600160c01b03199093166001600160a01b0390951694909417919091179283168117825560c0860151959650869593919260ff60e01b1990911664ffffffffff60c01b199091161790600160e01b9084908111156101cc576101cc610438565b0217905550905050806000015181602001518760008051602061053a833981519152338989604051610200939291906104d0565b60405180910390a451915061026d9050565b60008581526020819052604090205461023e57604051630f0e3e8f60e21b815260040160405180910390fd5b84868560008051602061053a833981519152338787604051610262939291906104d0565b60405180910390a450835b95945050505050565b6102b36040805160e081018252600080825260208201819052918101829052606081018290526080810182905260a081018290529060c082015290565b60008281526020818152604091829020825160e081018452815481526001820154928101929092526002808201549383019390935260038101546001600160a01b0381166060840152600160a01b810463ffffffff9081166080850152600160c01b82041660a08401529192909160c0840191600160e01b90910460ff169081111561034157610341610438565b600281111561035257610352610438565b90525092915050565b6000838383436040516020016103749493929190610510565b6040516020818303038152906040528051906020012090509392505050565b6000806000806000608086880312156103ab57600080fd5b85359450602086013593506040860135925060608601356001600160401b03808211156103d757600080fd5b818801915088601f8301126103eb57600080fd5b8135818111156103fa57600080fd5b89602082850101111561040c57600080fd5b9699959850939650602001949392505050565b60006020828403121561043157600080fd5b5035919050565b634e487b7160e01b600052602160045260246000fd5b600060e08201905082518252602083015160208301526040830151604083015260018060a01b036060840151166060830152608083015163ffffffff80821660808501528060a08601511660a0850152505060c0830151600381106104c357634e487b7160e01b600052602160045260246000fd5b8060c08401525092915050565b6001600160a01b03841681526040602082018190528101829052818360608301376000818301606090810191909152601f909201601f1916010192915050565b606085901b6001600160601b03191681528284601483013760149201918201526034019291505056fea9101322f4d5560a7824e80eb5ce39f9fee9a85ad662991efe6532cd99458ef5a164736f6c6343000814000a",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c8063785102901461003b578063e27cd07414610061575b600080fd5b61004e610049366004610393565b610081565b6040519081526020015b60405180910390f35b61007461006f36600461041f565b610276565b604051610058919061044e565b60008461021257600061009533858561035b565b905060006040518060e001604052808381526020016000801b8a141580156100ca575060008a81526020819052604090205415155b6100d55760006100d7565b895b815260200187156100e857876100ec565b6001545b8152336020820152600060408201819052606082018190526080909101526000838152602081815260409182902083518155908301516001820155908201516002808301919091556060830151600383018054608086015160a087015163ffffffff908116600160c01b0263ffffffff60c01b1991909216600160a01b026001600160c01b03199093166001600160a01b0390951694909417919091179283168117825560c0860151959650869593919260ff60e01b1990911664ffffffffff60c01b199091161790600160e01b9084908111156101cc576101cc610438565b0217905550905050806000015181602001518760008051602061053a833981519152338989604051610200939291906104d0565b60405180910390a451915061026d9050565b60008581526020819052604090205461023e57604051630f0e3e8f60e21b815260040160405180910390fd5b84868560008051602061053a833981519152338787604051610262939291906104d0565b60405180910390a450835b95945050505050565b6102b36040805160e081018252600080825260208201819052918101829052606081018290526080810182905260a081018290529060c082015290565b60008281526020818152604091829020825160e081018452815481526001820154928101929092526002808201549383019390935260038101546001600160a01b0381166060840152600160a01b810463ffffffff9081166080850152600160c01b82041660a08401529192909160c0840191600160e01b90910460ff169081111561034157610341610438565b600281111561035257610352610438565b90525092915050565b6000838383436040516020016103749493929190610510565b6040516020818303038152906040528051906020012090509392505050565b6000806000806000608086880312156103ab57600080fd5b85359450602086013593506040860135925060608601356001600160401b03808211156103d757600080fd5b818801915088601f8301126103eb57600080fd5b8135818111156103fa57600080fd5b89602082850101111561040c57600080fd5b9699959850939650602001949392505050565b60006020828403121561043157600080fd5b5035919050565b634e487b7160e01b600052602160045260246000fd5b600060e08201905082518252602083015160208301526040830151604083015260018060a01b036060840151166060830152608083015163ffffffff80821660808501528060a08601511660a0850152505060c0830151600381106104c357634e487b7160e01b600052602160045260246000fd5b8060c08401525092915050565b6001600160a01b03841681526040602082018190528101829052818360608301376000818301606090810191909152601f909201601f1916010192915050565b606085901b6001600160601b03191681528284601483013760149201918201526034019291505056fea9101322f4d5560a7824e80eb5ce39f9fee9a85ad662991efe6532cd99458ef5a164736f6c6343000814000a",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 150,
+        "contract": "contracts/ACS.sol:ACS",
+        "label": "_threads",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_bytes32,t_struct(Thread)418_storage)"
+      },
+      {
+        "astId": 152,
+        "contract": "contracts/ACS.sol:ACS",
+        "label": "_defaultCoordinator",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_bytes32"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bytes32": {
+        "encoding": "inplace",
+        "label": "bytes32",
+        "numberOfBytes": "32"
+      },
+      "t_enum(Status)401": {
+        "encoding": "inplace",
+        "label": "enum Status",
+        "numberOfBytes": "1"
+      },
+      "t_mapping(t_bytes32,t_struct(Thread)418_storage)": {
+        "encoding": "mapping",
+        "key": "t_bytes32",
+        "label": "mapping(bytes32 => struct Thread)",
+        "numberOfBytes": "32",
+        "value": "t_struct(Thread)418_storage"
+      },
+      "t_struct(Thread)418_storage": {
+        "encoding": "inplace",
+        "label": "struct Thread",
+        "members": [
+          {
+            "astId": 404,
+            "contract": "contracts/ACS.sol:ACS",
+            "label": "threadUID",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_bytes32"
+          },
+          {
+            "astId": 406,
+            "contract": "contracts/ACS.sol:ACS",
+            "label": "parentThreadUID",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_bytes32"
+          },
+          {
+            "astId": 408,
+            "contract": "contracts/ACS.sol:ACS",
+            "label": "agentUID",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_bytes32"
+          },
+          {
+            "astId": 410,
+            "contract": "contracts/ACS.sol:ACS",
+            "label": "requester",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_address"
+          },
+          {
+            "astId": 412,
+            "contract": "contracts/ACS.sol:ACS",
+            "label": "totalBudget",
+            "offset": 20,
+            "slot": "3",
+            "type": "t_uint32"
+          },
+          {
+            "astId": 414,
+            "contract": "contracts/ACS.sol:ACS",
+            "label": "remainingBudget",
+            "offset": 24,
+            "slot": "3",
+            "type": "t_uint32"
+          },
+          {
+            "astId": 417,
+            "contract": "contracts/ACS.sol:ACS",
+            "label": "status",
+            "offset": 28,
+            "slot": "3",
+            "type": "t_enum(Status)401"
+          }
+        ],
+        "numberOfBytes": "128"
+      },
+      "t_uint32": {
+        "encoding": "inplace",
+        "label": "uint32",
+        "numberOfBytes": "4"
+      }
+    }
+  }
+}
